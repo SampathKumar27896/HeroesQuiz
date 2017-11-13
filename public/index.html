@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8'>
+		<meta name='description' content='A JavaScript Quiz Game'>
+			<title>Quiz Ninja</title>
+			<link rel='stylesheet' href='styles.css'>
+
+			<style>
+				.correct{
+					background-color: blue;
+				}
+
+		    </style>
+	</head>
+<body>
+	<section class='dojo'>
+		<div class='quiz-body'>
+			<header>
+				<div id="score">Score:<strong>0</strong></div> 
+				<h1>Quiz Ninja!</h1>
+			</header>
+
+			<div id='question'></div>
+			<div id='result'></div>
+			<div id='info'></div>
+
+
+
+
+
+		</div>
+	</section>
+	
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyChfcfNRG4AawsTB39WnOwdQJXfCSNS4I8",
+    authDomain: "heroes-quiz.firebaseapp.com",
+    databaseURL: "https://heroes-quiz.firebaseio.com",
+    projectId: "heroes-quiz",
+    storageBucket: "heroes-quiz.appspot.com",
+    messagingSenderId: "422300198889"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src='main.js'></script>
+</body>
+</html>
