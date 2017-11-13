@@ -46,7 +46,7 @@ const game = {
 
 			for(const q of this.questions){
 				this.question = q;
-				this.ask(this.question);
+				//this.ask(this.question);
 			}
 
 			this.gameOver();
