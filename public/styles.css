@@ -1,3 +1,4 @@
+
 @import
 	url('https://fonts.googleapis.com/css?family=Amatic+SC');
 body{
@@ -8,12 +9,14 @@ body{
 		background:
  					url("jl.jpg");
 	width: 100%;
+	font-size:48px;
 	height: 800px;
 	background-size: 100% auto;
 	padding-top: 10px;
 }
 .quiz-body{
 		background: rgba(255,255,255,1);
+		font-size:48px;
 		margin: 150px 33%;
 		padding: 10px 20px 50px 20px;
 		-webkit-box-shadow: 4px 4px 11px 3px rgba(0,0,0,0.3);
@@ -42,6 +45,7 @@ button {
 		color: #fff;
 		margin: 0.2em 0;
 		width: 100%;
+		font-size:48px;
 		text-align: center;
 }
 .correct {

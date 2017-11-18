@@ -2,19 +2,29 @@
 
 const view = {
 
-	score:document.querySelector('#score strong'),
-	question:document.getElementById('question'),
-	result:document.getElementById('result'),
-	info:document.getElementById('info'),
+	score:document.getElementById('score '),
+	question:document.getElementById('question '),
+	result:document.getElementById('result '),
+	info:document.getElementById('info '),
 
 	//function 
 
-	render(target,content,attributes){
-
+	 render(target,content,attributes){
+	
 		for(const key in attributes){
+				
 				target.setAttribute(key,attributes[key]);
 		}
-		target.innerHtML = content;
+		
+		
+		if(target.id === 'score '){
+
+				target.innerHTML = "Score:"+content;
+		}
+		else{
+			content += "<br>"
+		target.innerHTML +=content;
+	}
 	}
 
 };
@@ -58,7 +68,7 @@ const game = {
 		const ques = `What is ${this.question.name}'s real name?.`;
 
 		//function call to render
-
+		
 		view.render(view.question,ques);
 
 		const response = prompt(ques);
@@ -72,16 +82,19 @@ const game = {
 		if(answer === response){
 
 			//call to render
-			view.render(view.result,'Correct!',{'class' :'correct'});
+			let answeris = `Correct ! It is :${answer}`;
+			view.render(view.result,answeris,{'class' :'correct'});
 			alert("Correct !");
 			this.score++;
 			//call to render
+			console.log(view.score);
 			view.render(view.score,this.score);
 		}
 		else{
 
 			//call to render
-
+			
+	
 			view.render(view.result,`Wrong ! The correct answer was ${answer}`,{'class':'wrong'});
 			 alert(`Wrong! The correct answer is ${answer}`);
 
@@ -89,7 +102,6 @@ const game = {
 	},
 
 	gameOver(){
-
 
 		//call to render 
 		view.render(view.info,`Game Over,You sccored ${this.score} point${this.score !== 1? 's':''}`);
@@ -101,10 +113,6 @@ const game = {
 
 };
 
-
-
-
-
-
-
 game.start(quiz);
+
+
